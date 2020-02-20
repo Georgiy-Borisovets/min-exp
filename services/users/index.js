@@ -8,10 +8,15 @@ const router = require('./routes');
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+
+mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+});
 
 app.use(bodyParser.json());
 router(app);
+
 app.listen(port, () => {
     console.log('server is listening on: ' + port);
 });
