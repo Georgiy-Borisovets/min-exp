@@ -1,18 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
+const userController = require('../controllers/user');
+
 router.route('/')
-    .get(function(req, res) {
-        const data = {
-            id: 1,
-            name: 'Some User Name',
-            description: 'Some Description',
-        };
-        db.
+    .get(userController.getAll)
+    .post(userController.create);
 
-        res.status(200).send(data);
-    });
+router.route('/:id')
+    .get(userController.findById)
+    .put(userController.update)
+    .delete(userController.delete);
 
-module.exports = function(app, db) {
+module.exports = (app) => {
     app.use('/users', router);
 };
