@@ -8,7 +8,8 @@ module.exports = {
                 res.send(err);
             }
 
-            res.json(user);
+            user.generateAuthToken()
+                .then(token => res.json({ user, token }));
         });
     },
     getAll(req, res) {
@@ -52,7 +53,22 @@ module.exports = {
                 res.send(err);
             }
 
-            res.json({message: 'ok'});
+            res.json({ message: 'ok' });
         });
+    },
+    login(req, res) {
+        const { email, password } = req.body;
+        User.findByCredentials(email, password)
+            .then(user => {
+                if (!user) {
+                    return res.status(401).send({ error: 'Login failed!' });
+                }
+
+                const token = user.generateAuthToken();
+                res.send({ user, token });
+            })
+            .catch(err => {
+                res.status(400).send(err);
+            });
     },
 };
