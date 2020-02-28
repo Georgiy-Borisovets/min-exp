@@ -9,6 +9,7 @@ services:
       - 80:80
     depends_on:
       - auth
+      - test
 
   auth:
     build: ../services/auth
@@ -19,3 +20,13 @@ services:
       - 8000
     environment:
       PORT: 8000
+
+  test:
+    build: ../services/test
+    volumes:
+      - ${APP_SERVICES_ROOT}/test:/var/www/services/test
+      - /var/www/services/test/node_modules
+    expose:
+      - 8080
+    environment:
+      PORT: 8080
