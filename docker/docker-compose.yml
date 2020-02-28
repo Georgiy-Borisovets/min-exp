@@ -4,7 +4,7 @@ services:
   nginx:
     build: ./nginx
     volumes:
-      - ${APP_ROOT}/build:/var/www/public
+      - ${APP_ROOT}/web/build:/var/www/public
     ports:
       - 80:80
     depends_on:

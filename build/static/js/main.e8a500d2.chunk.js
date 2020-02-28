@@ -1,2 +1,0 @@
-(this["webpackJsonpmic-exp"]=this["webpackJsonpmic-exp"]||[]).push([[0],{3:function(e,n,t){e.exports=t(8)},8:function(e,n,t){"use strict";t.r(n);var c=t(0),r=t.n(c),i=t(2),o=function(){return r.a.createElement("div",null,"Test --++")};t.n(i).a.render(r.a.createElement(o,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.e8a500d2.chunk.js.map
