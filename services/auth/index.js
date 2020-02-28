@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-const router = require('./routes');
 const app = express();
+const router = require('./routes');
 const port = process.env.PORT || 3000;
 
 
@@ -16,7 +16,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 });
 
 app.use(bodyParser.json());
-router(app);
+app.use('/api/auth', router);
 
 //DEFAULT ERROR HANDLER
 app.use(function (err, req, res, next) {

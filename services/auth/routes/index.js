@@ -4,7 +4,7 @@ const router = express.Router();
 const userController = require('../controllers/user');
 const auth = require('../middlewares/auth.js');
 
-router.route('/')
+router.route('/users')
     .get(userController.getAll)
     .post(userController.create);
 
@@ -19,6 +19,4 @@ router.route('/:id')
     .put(userController.update)
     .delete(userController.delete);
 
-module.exports = (app) => {
-    app.use('/users', router);
-};
+module.exports = router;

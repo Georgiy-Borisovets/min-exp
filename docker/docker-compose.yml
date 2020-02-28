@@ -3,5 +3,19 @@ version: '3'
 services:
   nginx:
     build: ./nginx
+    volumes:
+      - ${APP_ROOT}/build:/var/www/public
     ports:
       - 80:80
+    depends_on:
+      - auth
+
+  auth:
+    build: ../services/auth
+    volumes:
+      - ${APP_SERVICES_ROOT}/auth:/var/www/services/auth
+      - /var/www/services/auth/node_modules
+    expose:
+      - 8000
+    environment:
+      PORT: 8000
