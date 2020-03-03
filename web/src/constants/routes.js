@@ -1,6 +1,6 @@
 export const routesByName = {
   home: '/',
-  signIn: '/sign-in',
+  login: '/login',
   signUp: '/sign-up',
   roteWithParams(param = ':param') {
     return `/prefix/${param}`;

@@ -5,6 +5,8 @@ import { ConnectedRouter } from 'connected-react-router';
 import 'styles/index.scss';
 import { ReactComponent as Sprite } from 'assets/sprite.svg';
 import store, { history } from 'store/store';
+// eslint-disable-next-line no-unused-vars
+import i18n from './translations/i18n';
 import App from './App';
 
 ReactDOM.render(

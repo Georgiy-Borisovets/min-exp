@@ -1,0 +1,10 @@
+@import "colors";
+
+.base-input {
+  padding: 5px;
+  background: $dark-gray;
+  border: 1px solid $gray-light;
+  border-radius: 2px;
+  color: $gray-light;
+  outline: none;
+}

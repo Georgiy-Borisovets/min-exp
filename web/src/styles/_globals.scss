@@ -1,3 +1,5 @@
+@import "colors";
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +10,7 @@ body, html {
 
 body {
   margin: 0;
+  background: $bg-primary;
 }
 
 #root {

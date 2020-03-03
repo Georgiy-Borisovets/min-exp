@@ -1,0 +1,9 @@
+@import "colors";
+
+.base-card {
+  border-radius: 2px;
+
+  &.card-shadow {
+    box-shadow: 0 0 10px 0 $gray-light;
+  }
+}
