@@ -1,4 +1,12 @@
-// rewrite for bootstrap variables
-@import "functions";
+@import "colors";
 
-$grid-gutter-width: spacing(4);
+$theme-colors: (
+  'primary': $green,
+  'secondary': #848484,
+);
+
+$btn-font-weight: 600;
+$btn-border-width: 2px;
+$body-color: $gray-light;
+
+$btn-padding-y: 5px;

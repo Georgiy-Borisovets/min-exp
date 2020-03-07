@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Field } from 'react-final-form';
 
-// className="base-input font-size-main font-bold"
-
-const LoginFormField = (props) => {
+const FormField = (props) => {
   const {
     name,
     type,
@@ -27,17 +25,17 @@ const LoginFormField = (props) => {
     </Field>
   );
 };
-LoginFormField.propTypes = {
+FormField.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
 };
 
-LoginFormField.defaultProps = {
+FormField.defaultProps = {
   type: 'text',
   placeholder: '',
   className: '',
 };
 
-export default LoginFormField;
+export default FormField;

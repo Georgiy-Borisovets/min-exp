@@ -2,5 +2,15 @@
 
 $bg-primary: #505050;
 
+$green: #579869;
 $gray-light: #c0c0c0;
-$dark-gray: #48484a;
+$gray-light-1: #696969;
+$gray: #48484a;
+$gray-dark: #2f2d2d;
+
+$text-colors: (
+  'green': $green,
+  'gray-light': $gray-light,
+  'gray': $gray,
+  'gray-dark': $gray-dark,
+);

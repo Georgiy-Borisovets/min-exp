@@ -1,5 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { createBrowserHistory } from 'history';
+import thunk from 'redux-thunk';
 
 import logger from 'redux-logger';
 import { routerMiddleware } from 'connected-react-router';
@@ -17,7 +18,7 @@ const composeEnhancers = typeof window === 'object'
     // Specify extension's options like name, actionsBlacklist, actionsCreators, serialize...
   }) : compose;
 
-const middlewares = [];
+const middlewares = [ thunk ];
 
 export const history = createBrowserHistory();
 

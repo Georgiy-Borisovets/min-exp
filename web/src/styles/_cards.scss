@@ -2,8 +2,13 @@
 
 .base-card {
   border-radius: 2px;
+  background: $gray-dark;
 
   &.card-shadow {
     box-shadow: 0 0 10px 0 $gray-light;
+  }
+
+  &.card-border {
+    border: 1px solid $gray-light;
   }
 }

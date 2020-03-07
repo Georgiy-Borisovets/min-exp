@@ -1,4 +1,5 @@
-@import './variables';
+@import 'variables';
+@import 'colors';
 
 // Text
 
@@ -28,4 +29,10 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+@each $name, $color in $text-colors {
+  .color-#{$name} {
+    color: $color;
+  }
 }

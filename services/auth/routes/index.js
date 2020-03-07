@@ -9,8 +9,8 @@ const userController = require('../controllers/user');
 // router.get('/me', auth, userController.currentUser);
 // router.post('/logout', auth, userController.logout);
 //
-// router.route('/login')
-//     .post(userController.login);
+// router.route('/components')
+//     .post(userController.components);
 //
 // router.route('/:id')
 //     .get(userController.findById)

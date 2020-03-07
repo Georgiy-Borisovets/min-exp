@@ -1,10 +1,10 @@
 @import "colors";
 
 .base-input {
-  padding: 5px;
-  background: $dark-gray;
+  padding: 10px;
+  background: $gray-dark;
   border: 1px solid $gray-light;
-  border-radius: 2px;
+  border-radius: 4px;
   color: $gray-light;
   outline: none;
 }
