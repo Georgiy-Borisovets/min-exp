@@ -9,7 +9,7 @@ services:
       - 80:80
     depends_on:
       - auth
-      - test
+      - english
 
   auth:
     build: ../services/auth
@@ -21,11 +21,11 @@ services:
     environment:
       PORT: 8000
 
-  test:
-    build: ../services/test
+  english:
+    build: ../services/english
     volumes:
-      - ${APP_SERVICES_ROOT}/test:/var/www/services/test
-      - /var/www/services/test/node_modules
+      - ${APP_SERVICES_ROOT}/english:/var/www/services/english
+      - /var/www/services/english/node_modules
     expose:
       - 8080
     environment:
